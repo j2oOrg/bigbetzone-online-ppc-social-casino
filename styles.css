@@ -163,24 +163,24 @@ blockquote {
 }
 
 .brand__logo {
-  width: 192px;
-  height: 76px;
-  border-radius: 26px;
+  width: 240px;
+  min-height: 96px;
+  border-radius: 32px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 1rem;
-  background-image: linear-gradient(135deg, rgba(7, 2, 32, 0.78), rgba(16, 3, 52, 0.45)), url('/public/images/logobackground.webp');
+  gap: 0.15rem;
+  padding: 0.85rem 1.4rem;
+  background-image:
+    linear-gradient(140deg, rgba(7, 2, 40, 0.92), rgba(26, 5, 78, 0.65)),
+    radial-gradient(circle at 30% 20%, rgba(255, 77, 166, 0.4), transparent 55%),
+    radial-gradient(circle at 70% 80%, rgba(99, 242, 255, 0.28), transparent 60%),
+    url('/public/images/logobackground.webp');
   background-size: cover;
   background-position: center;
   position: relative;
   overflow: hidden;
-  text-transform: uppercase;
-  letter-spacing: 0.35em;
-  font-size: 0.82rem;
-  font-family: var(--font-display);
-  font-weight: 600;
-  color: #fffefe;
   border: 1px solid rgba(255, 255, 255, 0.35);
   box-shadow: 0 20px 48px rgba(5, 0, 18, 0.7);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -199,6 +199,25 @@ blockquote {
 .brand__logo span {
   position: relative;
   z-index: 1;
+  text-transform: uppercase;
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+.brand__word {
+  font-size: 1.25rem;
+  letter-spacing: 0.25em;
+  color: transparent;
+  background: linear-gradient(100deg, var(--brand-amber), var(--brand-slate));
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0 12px 22px rgba(5, 0, 18, 0.7);
+}
+
+.brand__domain {
+  font-size: 0.78rem;
+  letter-spacing: 0.5em;
+  color: rgba(255, 255, 255, 0.9);
   text-shadow: 0 8px 18px rgba(2, 0, 10, 0.65);
 }
 
