@@ -1,20 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
 
 :root {
-  --bg: #020216;
-  --bg-soft: #071437;
-  --surface: rgba(7, 11, 30, 0.95);
-  --surface-alt: rgba(11, 18, 42, 0.9);
-  --surface-card: rgba(255, 255, 255, 0.06);
-  --brand-electric: #f8cf5d;
-  --brand-violet: #3fe2d6;
-  --brand-amber: #ffe58b;
-  --brand-slate: #82defb;
-  --text: #fffaf1;
-  --muted: rgba(255, 245, 230, 0.78);
-  --muted-soft: rgba(255, 245, 230, 0.6);
-  --border: rgba(255, 255, 255, 0.12);
-  --border-strong: rgba(255, 255, 255, 0.22);
+  --bg: #030012;
+  --bg-soft: #090524;
+  --surface: rgba(7, 4, 24, 0.95);
+  --surface-alt: rgba(12, 8, 36, 0.92);
+  --surface-card: rgba(255, 255, 255, 0.08);
+  --brand-electric: #ff4da6;
+  --brand-violet: #7c5dff;
+  --brand-amber: #ffd96d;
+  --brand-slate: #63f2ff;
+  --text: #fff9ff;
+  --muted: rgba(255, 232, 250, 0.84);
+  --muted-soft: rgba(255, 232, 250, 0.64);
+  --border: rgba(255, 255, 255, 0.16);
+  --border-strong: rgba(255, 255, 255, 0.3);
   --shadow-soft: 0 35px 90px rgba(2, 6, 23, 0.6);
   --radius-lg: 32px;
   --radius-md: 20px;
@@ -36,8 +36,9 @@ body {
   margin: 0;
   min-height: 100vh;
   font-family: var(--font-body);
-  background: radial-gradient(circle at 18% 20%, rgba(248, 207, 93, 0.22), transparent 58%),
-              radial-gradient(circle at 82% 15%, rgba(63, 226, 214, 0.18), transparent 55%),
+  background: radial-gradient(circle at 18% 20%, rgba(255, 77, 166, 0.22), transparent 58%),
+              radial-gradient(circle at 82% 16%, rgba(124, 93, 255, 0.2), transparent 55%),
+              radial-gradient(circle at 64% 78%, rgba(99, 242, 255, 0.12), transparent 60%),
               var(--bg);
   color: var(--text);
   line-height: 1.65;
@@ -54,11 +55,11 @@ body::after {
 }
 
 body::before {
-  background: radial-gradient(680px 480px at 12% 82%, rgba(248, 207, 93, 0.2), transparent 65%);
+  background: radial-gradient(680px 480px at 12% 82%, rgba(255, 77, 166, 0.18), transparent 65%);
 }
 
 body::after {
-  background: radial-gradient(820px 620px at 82% 75%, rgba(63, 226, 214, 0.2), transparent 70%);
+  background: radial-gradient(820px 620px at 82% 75%, rgba(99, 242, 255, 0.16), transparent 70%);
 }
 
 img, svg {
@@ -169,7 +170,7 @@ blockquote {
   align-items: center;
   justify-content: center;
   padding: 0 1rem;
-  background-image: linear-gradient(135deg, rgba(4, 2, 20, 0.65), rgba(4, 2, 20, 0.25)), url('/public/images/logobackground.webp');
+  background-image: linear-gradient(135deg, rgba(7, 2, 32, 0.78), rgba(16, 3, 52, 0.45)), url('/public/images/logobackground.webp');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -181,7 +182,7 @@ blockquote {
   font-weight: 600;
   color: #fffefe;
   border: 1px solid rgba(255, 255, 255, 0.35);
-  box-shadow: 0 20px 48px rgba(4, 2, 20, 0.65);
+  box-shadow: 0 20px 48px rgba(5, 0, 18, 0.7);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -189,8 +190,8 @@ blockquote {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 20% 20%, rgba(248, 207, 93, 0.45), transparent 55%),
-              radial-gradient(circle at 80% 30%, rgba(63, 226, 214, 0.35), transparent 60%);
+  background: radial-gradient(circle at 20% 20%, rgba(255, 77, 166, 0.5), transparent 55%),
+              radial-gradient(circle at 80% 30%, rgba(99, 242, 255, 0.38), transparent 60%);
   mix-blend-mode: screen;
   opacity: 0.75;
 }
@@ -253,8 +254,8 @@ blockquote {
 
 .btn--primary {
   background: linear-gradient(130deg, var(--brand-electric), var(--brand-violet));
-  color: #05050b;
-  box-shadow: 0 25px 50px rgba(84, 255, 227, 0.25);
+  color: #1a061f;
+  box-shadow: 0 25px 50px rgba(255, 77, 166, 0.35);
 }
 
 .btn--ghost {
@@ -346,7 +347,7 @@ blockquote {
 }
 
 .hero__panel {
-  background: linear-gradient(135deg, rgba(248, 207, 93, 0.2), rgba(63, 226, 214, 0.22));
+  background: linear-gradient(135deg, rgba(255, 77, 166, 0.25), rgba(124, 93, 255, 0.3));
   border-radius: var(--radius-lg);
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: clamp(1.5rem, 3vw, 2.5rem);
@@ -526,7 +527,7 @@ blockquote {
   padding: 2rem;
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-strong);
-  background: linear-gradient(120deg, rgba(248, 207, 93, 0.18), rgba(63, 226, 214, 0.18));
+  background: linear-gradient(120deg, rgba(255, 77, 166, 0.2), rgba(124, 93, 255, 0.25));
   box-shadow: var(--shadow-soft);
   display: grid;
   gap: 0.9rem;
