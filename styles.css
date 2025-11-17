@@ -539,6 +539,183 @@ blockquote {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
+.origin-layout {
+  display: grid;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: start;
+}
+
+.origin-story {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.phase-timeline {
+  display: grid;
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.phase-card {
+  background: var(--surface-alt);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-strong);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  overflow: hidden;
+}
+
+.phase-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 10% 0%, rgba(255, 77, 166, 0.15), transparent 45%),
+              radial-gradient(circle at 90% 20%, rgba(124, 93, 255, 0.18), transparent 55%);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.phase-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.phase-card__tag {
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--muted-soft);
+  margin-bottom: 0.4rem;
+}
+
+.phase-card__list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.phase-card__list li {
+  position: relative;
+  padding-left: 1.4rem;
+  color: var(--muted);
+}
+
+.phase-card__list li::before {
+  content: "";
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--brand-electric);
+  position: absolute;
+  left: 0;
+  top: 0.35rem;
+  box-shadow: 0 0 12px rgba(255, 77, 166, 0.4);
+}
+
+.spark-panel {
+  border-radius: var(--radius-lg);
+  padding: clamp(1.5rem, 3vw, 2rem);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: linear-gradient(145deg, rgba(255, 77, 166, 0.3), rgba(124, 93, 255, 0.4), rgba(99, 242, 255, 0.3));
+  box-shadow: 0 35px 80px rgba(5, 0, 20, 0.55);
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  color: var(--text);
+}
+
+.spark-panel__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  background: rgba(5, 0, 20, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.spark-panel__intro {
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.spark-panel__stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.8rem;
+}
+
+.spark-panel__stat {
+  background: rgba(5, 0, 18, 0.35);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 0.9rem 1rem;
+  text-align: center;
+}
+
+.spark-panel__stat small {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.65rem;
+  color: var(--muted-soft);
+  margin-bottom: 0.35rem;
+}
+
+.spark-panel__stat strong {
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.spark-panel__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.spark-panel__grid h4 {
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+}
+
+.spark-panel__list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.spark-panel__list li {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.spark-panel__list li::before {
+  content: "";
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 3px;
+  background: var(--brand-slate);
+  position: absolute;
+  left: 0;
+  top: 0.4rem;
+  box-shadow: 0 0 15px rgba(99, 242, 255, 0.6);
+}
+
+.spark-panel__footer {
+  color: var(--text);
+  font-weight: 600;
+}
+
 .checklist {
   list-style: none;
   padding: 0;
@@ -688,6 +865,10 @@ textarea {
 @media (max-width: 900px) {
   .site-nav {
     justify-content: flex-start;
+  }
+
+  .origin-layout {
+    grid-template-columns: 1fr;
   }
 }
 
