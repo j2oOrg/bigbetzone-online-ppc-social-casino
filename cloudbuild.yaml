@@ -46,7 +46,7 @@ steps:
 
         gcloud container clusters get-credentials ${_CLUSTER_NAME} --region=${_CLUSTER_REGION}
 
-        cat > k8s.yaml <<'EOF'
+        cat > k8s.yaml <<EOF
         apiVersion: v1
         kind: Namespace
         metadata: { name: ${_K8S_NAMESPACE} }
