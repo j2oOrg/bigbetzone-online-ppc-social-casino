@@ -163,7 +163,9 @@ blockquote {
 }
 
 .brand__logo {
-  width: 240px;
+  width: fit-content;
+  min-width: 260px;
+  max-width: 340px;
   min-height: 96px;
   border-radius: 32px;
   display: flex;
@@ -215,8 +217,8 @@ blockquote {
 }
 
 .brand__domain {
-  font-size: 0.78rem;
-  letter-spacing: 0.5em;
+  font-size: 0.82rem;
+  letter-spacing: 0.32em;
   color: rgba(255, 255, 255, 0.9);
   text-shadow: 0 8px 18px rgba(2, 0, 10, 0.65);
 }
