@@ -134,6 +134,20 @@ blockquote {
   transform: translate(-50%, 0);
 }
 
+.compliance-banner {
+  background: linear-gradient(135deg, #ff4da6, #ffb84d);
+  color: #23061f;
+  padding: 0.85rem 1.5rem;
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.compliance-banner strong {
+  margin-right: 0.4rem;
+}
+
 .shell {
   width: min(1180px, 100%);
   margin: 0 auto;
